@@ -36,8 +36,8 @@
       <a class="brand" href="#top" aria-label="Chubin Zhang, back to top">CZ<span class="brand-dot">.</span></a>
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="#about">About</a>
-        <a href="#research">Research</a>
         <a href="#news">News</a>
+        <a href="#research">Research</a>
         <a href="#publications">Papers</a>
         <a href="#background">Background</a>
       </nav>
@@ -76,17 +76,35 @@
       </div>
     </section>
 
+    <section class="news-section" id="news" aria-labelledby="news-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-index">02 / News</p>
+            <h2 id="news-title">Recent updates</h2>
+          </div>
+        </div>
+        <ol class="news-list">
+          <li><time datetime="2026-09">Sep 2026</time><p><span class="news-emoji" aria-hidden="true">🎉</span> <a href="#paper-calibration">Calibration Is Not Control</a> and <a href="#paper-denoising">Denoising Time Matters</a> were accepted to NeurIPS 2026 as posters.</p></li>
+          <li><time datetime="2026-05">May 2026</time><p><span class="news-emoji" aria-hidden="true">🎉</span> <a href="#paper-sampling">Time-Annealed Perturbation Sampling</a> was accepted to the ICML 2026 SPIGM workshop.</p></li>
+          <li><time datetime="2026-05">May 2026</time><p><span class="news-emoji" aria-hidden="true">🎉</span> <a href="#paper-gorl">GoRL</a> and <a href="#paper-distillation">Adversarial Dual On-Policy Distillation</a> were accepted to ICML 2026.</p></li>
+          <li><time datetime="2026-03">Mar 2026</time><p><span class="news-emoji" aria-hidden="true">🎉</span> <a href="#paper-tilting">Decoupling Tilting from Transport</a> was accepted to the ICLR 2026 ReALM-GEN workshop.</p></li>
+          <li><time datetime="2025-11">Nov 2025</time><p><span class="news-emoji" aria-hidden="true">🎉</span> <a href="#paper-lexchain">LexChain</a> was accepted to AAAI 2026.</p></li>
+        </ol>
+      </div>
+    </section>
+
     <section class="research-section" id="research" aria-labelledby="research-title">
       <div class="container">
         <div class="section-heading">
           <div>
-            <p class="section-index">02 / Research</p>
+            <p class="section-index">03 / Research</p>
             <h2 id="research-title">Research</h2>
           </div>
           <p class="section-note">Generative policies for online reinforcement learning.</p>
         </div>
 
-        <div class="featured-grid featured-grid-single">
+        <div class="featured-grid">
           <article class="featured-work">
             <a class="feature-image" href="assets/gorl-framework.png" target="_blank" rel="noopener noreferrer" aria-label="Open the GoRL framework figure at full size">
               <img src="assets/gorl-framework.png" alt="GoRL framework diagram showing latent policy optimization and generative decoder refinement" width="2043" height="873" loading="eager">
@@ -101,25 +119,22 @@
               </div>
             </div>
           </article>
-        </div>
-      </div>
-    </section>
 
-    <section class="news-section" id="news" aria-labelledby="news-title">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <p class="section-index">03 / News</p>
-            <h2 id="news-title">Recent updates</h2>
-          </div>
+          <article class="featured-work">
+            <a class="feature-image" href="assets/oversight-figure.png" target="_blank" rel="noopener noreferrer" aria-label="Open the agent oversight figure at full size">
+              <img src="assets/oversight-figure.png" alt="Research diagram comparing risk-score oversight with action-conditioned intervention decisions" width="1643" height="814" loading="lazy">
+            </a>
+            <div class="feature-detail">
+              <div class="feature-kicker">NeurIPS 2026</div>
+              <h3>Calibration Is Not Control</h3>
+              <p>Knowing that an agent might fail does not tell us whether intervening will help. We study intervention advantage through action-conditioned decisions and counterfactual branching from the same trajectory prefix.</p>
+              <div class="feature-links">
+                <a href="https://arxiv.org/abs/2606.21399" target="_blank" rel="noopener noreferrer">Preprint <span aria-hidden="true">&#8599;</span></a>
+                <span class="link-note">arXiv version uses an earlier title</span>
+              </div>
+            </div>
+          </article>
         </div>
-        <ol class="news-list">
-          <li><time datetime="2026-09">Sep 2026</time><p><span class="news-emoji" aria-hidden="true">🎉</span> <a href="#paper-calibration">Calibration Is Not Control</a> and <a href="#paper-denoising">Denoising Time Matters</a> were accepted to NeurIPS 2026 as posters.</p></li>
-          <li><time datetime="2026-05">May 2026</time><p><span class="news-emoji" aria-hidden="true">🎉</span> <a href="#paper-sampling">Time-Annealed Perturbation Sampling</a> was accepted to the ICML 2026 SPIGM workshop.</p></li>
-          <li><time datetime="2026-05">May 2026</time><p><span class="news-emoji" aria-hidden="true">🎉</span> <a href="#paper-gorl">GoRL</a> and <a href="#paper-distillation">Adversarial Dual On-Policy Distillation</a> were accepted to ICML 2026.</p></li>
-          <li><time datetime="2026-03">Mar 2026</time><p><span class="news-emoji" aria-hidden="true">🎉</span> <a href="#paper-tilting">Decoupling Tilting from Transport</a> was accepted to the ICLR 2026 ReALM-GEN workshop.</p></li>
-          <li><time datetime="2025-11">Nov 2025</time><p><span class="news-emoji" aria-hidden="true">🎉</span> <a href="#paper-lexchain">LexChain</a> was accepted to AAAI 2026.</p></li>
-        </ol>
       </div>
     </section>
 
