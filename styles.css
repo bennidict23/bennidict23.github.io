@@ -156,7 +156,6 @@ a:focus-visible {
 }
 
 .hero-topline,
-.eyebrow,
 .section-index,
 .feature-kicker,
 .group-heading,
@@ -225,33 +224,6 @@ a:focus-visible {
   padding-bottom: 5px;
 }
 
-.hero-current {
-  display: flex;
-  align-items: baseline;
-  gap: 20px;
-  max-width: 805px;
-  margin-top: 46px;
-  border-top: 1px solid var(--line-strong);
-  padding-top: 18px;
-}
-
-.hero-current .eyebrow {
-  flex: none;
-  color: var(--rust);
-}
-
-.hero-current p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.hero-current a {
-  color: var(--ink);
-  text-decoration-color: var(--line-strong);
-  text-underline-offset: 3px;
-}
-
 .research-section,
 .publications-section,
 .background-section,
@@ -299,6 +271,7 @@ a:focus-visible {
 }
 
 .about-email a,
+.about-copy a,
 .news-list a {
   color: var(--green-dark);
   text-decoration-color: #90b5a5;
@@ -306,12 +279,22 @@ a:focus-visible {
 }
 
 .about-email a:hover,
+.about-copy a:hover,
 .news-list a:hover {
   color: var(--rust);
 }
 
 .news-section {
   background: var(--soft);
+  padding: 42px 0 48px;
+}
+
+.news-section .section-heading {
+  margin-bottom: 14px;
+}
+
+.news-section .section-heading h2 {
+  font-size: 32px;
 }
 
 .news-list {
@@ -322,10 +305,10 @@ a:focus-visible {
 
 .news-list li {
   display: grid;
-  grid-template-columns: 145px minmax(0, 1fr);
-  gap: 26px;
+  grid-template-columns: 90px minmax(0, 1fr);
+  gap: 16px;
   border-top: 1px solid var(--line);
-  padding: 19px 0;
+  padding: 10px 0;
 }
 
 .news-list li:last-child {
@@ -334,7 +317,7 @@ a:focus-visible {
 
 .news-list time {
   color: var(--green);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   white-space: nowrap;
@@ -343,6 +326,12 @@ a:focus-visible {
 .news-list p {
   margin: 0;
   color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.news-emoji {
+  margin-right: 2px;
 }
 
 .section-heading {
@@ -379,10 +368,25 @@ a:focus-visible {
   gap: 44px;
 }
 
+.featured-grid-single {
+  grid-template-columns: 1fr;
+}
+
 .featured-work {
   min-width: 0;
   border-top: 2px solid var(--ink);
   padding-top: 17px;
+}
+
+.featured-grid-single .featured-work {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+  align-items: center;
+  gap: 48px;
+}
+
+.feature-detail {
+  min-width: 0;
 }
 
 .feature-image {
@@ -411,6 +415,10 @@ a:focus-visible {
   color: var(--green);
 }
 
+.feature-detail .feature-kicker {
+  margin-top: 0;
+}
+
 .featured-work h3 {
   margin: 12px 0 10px;
   font-family: Georgia, "Times New Roman", serif;
@@ -418,7 +426,7 @@ a:focus-visible {
   line-height: 1.22;
 }
 
-.featured-work > p {
+.feature-detail > p {
   margin: 0;
   color: var(--muted);
   line-height: 1.72;
@@ -444,11 +452,6 @@ a:focus-visible {
 .feature-links a:hover,
 .publication-links a:hover {
   color: var(--rust);
-}
-
-.link-note {
-  color: var(--muted);
-  font-size: 12px;
 }
 
 .publications-section {
@@ -727,16 +730,16 @@ a:focus-visible {
     font-size: 16px;
   }
 
-  .hero-current {
-    margin-top: 32px;
-  }
-
   .research-section,
   .publications-section,
   .background-section,
   .about-section,
   .news-section {
     padding: 54px 0 64px;
+  }
+
+  .news-section {
+    padding: 38px 0 42px;
   }
 
   .section-heading,
@@ -766,6 +769,11 @@ a:focus-visible {
     gap: 42px;
   }
 
+  .featured-grid-single .featured-work {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
   .feature-image {
     aspect-ratio: 2.05;
   }
@@ -790,8 +798,8 @@ a:focus-visible {
   }
 
   .news-list li {
-    grid-template-columns: 95px minmax(0, 1fr);
-    gap: 16px;
+    grid-template-columns: 80px minmax(0, 1fr);
+    gap: 12px;
   }
 }
 
@@ -829,20 +837,6 @@ a:focus-visible {
     margin-top: 20px;
   }
 
-  .hero-current {
-    display: block;
-    margin-top: 20px;
-    padding-top: 12px;
-  }
-
-  .hero-current .eyebrow {
-    display: none;
-  }
-
-  .hero-current p {
-    margin-top: 0;
-  }
-
   .featured-work h3 {
     font-size: 25px;
   }
@@ -852,9 +846,9 @@ a:focus-visible {
   }
 
   .news-list li {
-    grid-template-columns: 1fr;
-    gap: 4px;
-    padding: 16px 0;
+    grid-template-columns: 74px minmax(0, 1fr);
+    gap: 9px;
+    padding: 10px 0;
   }
 
   .about-copy {
