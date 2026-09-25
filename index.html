@@ -35,9 +35,10 @@
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="Chubin Zhang, back to top">CZ<span class="brand-dot">.</span></a>
       <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#news">News</a>
         <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#background">Background</a>
+        <a href="#publications">Papers</a>
         <a href="https://github.com/bennidict23" target="_blank" rel="noopener noreferrer">GitHub</a>
       </nav>
       <a class="header-contact" href="mailto:z1175085991@gmail.com">Get in touch <span aria-hidden="true">&#8599;</span></a>
@@ -65,11 +66,42 @@
       </div>
     </section>
 
+    <section class="about-section" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div>
+          <p class="section-index">01 / About</p>
+          <h2 id="about-title">About me</h2>
+        </div>
+        <div class="about-copy">
+          <p>I am Chubin Zhang, a Research Assistant at Nanyang Technological University, working with Prof. Bo An. Previously, I worked with Prof. Ivor Tsang at A*STAR's Centre for Frontier AI Research and with Prof. Zhiyuan Liu at Tsinghua University's THUNLP group. I received my B.Eng. in Internet of Things Engineering from Beijing University of Posts and Telecommunications.</p>
+          <p>My research interests are reinforcement learning, diffusion models, and AI agents. Recently, I have worked on generative policies for online RL and on understanding when interventions actually help an LLM agent.</p>
+          <p class="about-email">For research conversations, reach me at <a href="mailto:z1175085991@gmail.com">z1175085991@gmail.com</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="news-section" id="news" aria-labelledby="news-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-index">02 / News</p>
+            <h2 id="news-title">Recent updates</h2>
+          </div>
+        </div>
+        <ol class="news-list">
+          <li><time datetime="2026-09">Sep 2026</time><p><a href="#paper-calibration">Calibration Is Not Control</a> and <a href="#paper-denoising">Denoising Time Matters</a> were accepted to NeurIPS 2026 as posters.</p></li>
+          <li><time datetime="2026">2026</time><p><a href="#paper-gorl">Generative Online Reinforcement Learning</a> and <a href="#paper-distillation">Adversarial Dual On-Policy Distillation</a> were accepted to ICML 2026.</p></li>
+          <li><time datetime="2026">2026</time><p><a href="#paper-tilting">Decoupling Tilting from Transport</a> and <a href="#paper-sampling">Time-Annealed Perturbation Sampling</a> appeared at the ICLR 2026 ReALM-GEN and ICML 2026 SPIGM workshops, respectively.</p></li>
+          <li><time datetime="2026">2026</time><p><a href="#paper-lexchain">LexChain</a> was accepted to AAAI 2026.</p></li>
+        </ol>
+      </div>
+    </section>
+
     <section class="research-section" id="research" aria-labelledby="research-title">
       <div class="container">
         <div class="section-heading">
           <div>
-            <p class="section-index">01 / Research</p>
+            <p class="section-index">03 / Research</p>
             <h2 id="research-title">Selected work</h2>
           </div>
           <p class="section-note">From online policy learning to reliable agent oversight.</p>
@@ -80,7 +112,7 @@
             <a class="feature-image" href="assets/oversight-figure.png" target="_blank" rel="noopener noreferrer" aria-label="Open the agent oversight figure at full size">
               <img src="assets/oversight-figure.png" alt="Research diagram comparing risk-score oversight with action-conditioned intervention decisions" width="1643" height="814" loading="eager">
             </a>
-            <div class="feature-kicker"><span>NeurIPS 2026</span><span>First author</span></div>
+            <div class="feature-kicker">NeurIPS 2026</div>
             <h3>Calibration Is Not Control</h3>
             <p>Knowing that an agent might fail does not tell us whether intervening will help. We study intervention advantage through action-conditioned decisions and counterfactual branching from the same trajectory prefix.</p>
             <div class="feature-links">
@@ -93,7 +125,7 @@
             <a class="feature-image" href="assets/gorl-framework.png" target="_blank" rel="noopener noreferrer" aria-label="Open the GoRL framework figure at full size">
               <img src="assets/gorl-framework.png" alt="GoRL framework diagram showing latent policy optimization and generative decoder refinement" width="2043" height="873" loading="lazy">
             </a>
-            <div class="feature-kicker"><span>ICML 2026</span><span>First author</span></div>
+            <div class="feature-kicker">ICML 2026</div>
             <h3>Generative Online Reinforcement Learning</h3>
             <p>GoRL separates tractable latent policy optimization from flow and diffusion action generation, making expressive policies easier to train through online interaction.</p>
             <div class="feature-links">
@@ -109,34 +141,33 @@
       <div class="container">
         <div class="section-heading">
           <div>
-            <p class="section-index">02 / Publications</p>
+            <p class="section-index">04 / Publications</p>
             <h2 id="publications-title">Papers</h2>
           </div>
-          <p class="section-note">My name is highlighted in each author list.</p>
         </div>
 
         <div class="publication-group">
           <h3 class="group-heading">Conference papers <span>2026</span></h3>
           <ol class="publication-list">
-            <li class="publication-item">
+            <li class="publication-item" id="paper-calibration">
               <span class="publication-number">01</span>
               <div class="publication-body">
                 <h4>Calibration Is Not Control: Intervention Advantage for LLM-Agent Oversight</h4>
                 <p class="publication-authors"><strong>Chubin Zhang</strong>, Zhenglin Wan, Xingrui Yu, Jingxuan Wu, Qi Wen, Pengfei Zhou, Wangbo Zhao, Ivor Tsang</p>
-                <p class="publication-venue">NeurIPS 2026 <span class="venue-separator">/</span> Poster <span class="venue-separator">/</span> First author</p>
+                <p class="publication-venue">NeurIPS 2026 <span class="venue-separator">/</span> Poster</p>
               </div>
               <div class="publication-links"><a href="https://arxiv.org/abs/2606.21399" target="_blank" rel="noopener noreferrer" aria-label="Calibration Is Not Control preprint, earlier title">Preprint &#8599;</a></div>
             </li>
-            <li class="publication-item">
+            <li class="publication-item" id="paper-gorl">
               <span class="publication-number">02</span>
               <div class="publication-body">
                 <h4>Generative Online Reinforcement Learning</h4>
                 <p class="publication-authors"><strong>Chubin Zhang</strong>, Zhenglin Wan, Feng Chen, Fuchao Yang, Lang Feng, Yaxin Zhou, Xingrui Yu, Yang You, Ivor Tsang, Bo An</p>
-                <p class="publication-venue">ICML 2026 <span class="venue-separator">/</span> First author</p>
+                <p class="publication-venue">ICML 2026</p>
               </div>
               <div class="publication-links"><a href="https://arxiv.org/abs/2512.02581" target="_blank" rel="noopener noreferrer">Paper &#8599;</a><a href="https://github.com/bennidict23/GoRL" target="_blank" rel="noopener noreferrer">Code &#8599;</a></div>
             </li>
-            <li class="publication-item">
+            <li class="publication-item" id="paper-distillation">
               <span class="publication-number">03</span>
               <div class="publication-body">
                 <h4>Adversarial Dual On-Policy Distillation from Expressive Teacher</h4>
@@ -145,7 +176,7 @@
               </div>
               <div class="publication-links"><a href="https://arxiv.org/abs/2605.27095" target="_blank" rel="noopener noreferrer">Paper &#8599;</a></div>
             </li>
-            <li class="publication-item">
+            <li class="publication-item" id="paper-lexchain">
               <span class="publication-number">04</span>
               <div class="publication-body">
                 <h4>LexChain: Modeling Legal Reasoning Chains for Chinese Tort Case Analysis</h4>
@@ -154,7 +185,7 @@
               </div>
               <div class="publication-links"><a href="https://doi.org/10.1609/aaai.v40i42.40906" target="_blank" rel="noopener noreferrer">Paper &#8599;</a><a href="https://github.com/thunlp/LexChain" target="_blank" rel="noopener noreferrer">Code &#8599;</a></div>
             </li>
-            <li class="publication-item">
+            <li class="publication-item" id="paper-denoising">
               <span class="publication-number">05</span>
               <div class="publication-body">
                 <h4>Denoising Time Matters: Diverse Generation in Diffusion Language Models</h4>
@@ -168,16 +199,16 @@
         <div class="publication-group workshop-group">
           <h3 class="group-heading">Workshop papers <span>2026</span></h3>
           <ol class="publication-list">
-            <li class="publication-item">
+            <li class="publication-item" id="paper-tilting">
               <span class="publication-number">06</span>
               <div class="publication-body">
                 <h4>Decoupling Tilting from Transport: Stable Online Alignment of Flow and Diffusion Policies</h4>
                 <p class="publication-authors"><strong>Chubin Zhang</strong>, Zhenglin Wan, Feng Chen, Fuchao Yang, Lang Feng, Yaxin Zhou, Xingrui Yu, Yang You, Ivor Tsang, Bo An</p>
-                <p class="publication-venue">ICLR 2026 Workshop on ReALM-GEN <span class="venue-separator">/</span> First author</p>
+                <p class="publication-venue">ICLR 2026 Workshop on ReALM-GEN</p>
               </div>
               <div class="publication-links"><a href="https://openreview.net/forum?id=NMP4f4Cx2W" target="_blank" rel="noopener noreferrer">Paper &#8599;</a></div>
             </li>
-            <li class="publication-item">
+            <li class="publication-item" id="paper-sampling">
               <span class="publication-number">07</span>
               <div class="publication-body">
                 <h4>Time-Annealed Perturbation Sampling: Diverse Generation for Diffusion Language Models</h4>
@@ -194,7 +225,7 @@
     <section class="background-section" id="background" aria-labelledby="background-title">
       <div class="container background-grid">
         <div class="background-intro">
-          <p class="section-index">03 / Background</p>
+          <p class="section-index">05 / Background</p>
           <h2 id="background-title">Where I have worked</h2>
           <p>My work spans generative policy learning, agent oversight, and structured language model reasoning. I earned a B.Eng. in Internet of Things Engineering from Beijing University of Posts and Telecommunications.</p>
           <a class="text-link" href="#publications">Browse publications <span aria-hidden="true">&#8599;</span></a>
@@ -223,7 +254,7 @@
     <section class="contact-section" aria-labelledby="contact-title">
       <div class="container contact-inner">
         <div>
-          <p class="section-index">04 / Contact</p>
+          <p class="section-index">06 / Contact</p>
           <h2 id="contact-title">Let's talk research.</h2>
           <p>For research conversations, collaborations, or opportunities, reach me by email.</p>
         </div>

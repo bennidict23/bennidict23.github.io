@@ -254,8 +254,95 @@ a:focus-visible {
 
 .research-section,
 .publications-section,
-.background-section {
+.background-section,
+.about-section,
+.news-section {
   padding: 76px 0 88px;
+}
+
+.about-section,
+.news-section {
+  border-bottom: 1px solid var(--line);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 75px;
+}
+
+.about-grid h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 44px;
+  line-height: 1.15;
+}
+
+.about-copy {
+  max-width: 755px;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.78;
+}
+
+.about-copy p {
+  margin: 0 0 18px;
+}
+
+.about-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.about-copy .about-email {
+  color: var(--ink);
+  font-size: 15px;
+}
+
+.about-email a,
+.news-list a {
+  color: var(--green-dark);
+  text-decoration-color: #90b5a5;
+  text-underline-offset: 4px;
+}
+
+.about-email a:hover,
+.news-list a:hover {
+  color: var(--rust);
+}
+
+.news-section {
+  background: var(--soft);
+}
+
+.news-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.news-list li {
+  display: grid;
+  grid-template-columns: 145px minmax(0, 1fr);
+  gap: 26px;
+  border-top: 1px solid var(--line);
+  padding: 19px 0;
+}
+
+.news-list li:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.news-list time {
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.news-list p {
+  margin: 0;
+  color: var(--muted);
 }
 
 .section-heading {
@@ -320,15 +407,8 @@ a:focus-visible {
 }
 
 .feature-kicker {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
   margin-top: 20px;
   color: var(--green);
-}
-
-.feature-kicker span:last-child {
-  color: var(--rust);
 }
 
 .featured-work h3 {
@@ -653,14 +733,21 @@ a:focus-visible {
 
   .research-section,
   .publications-section,
-  .background-section {
+  .background-section,
+  .about-section,
+  .news-section {
     padding: 54px 0 64px;
   }
 
   .section-heading,
   .featured-grid,
-  .background-grid {
+  .background-grid,
+  .about-grid {
     grid-template-columns: 1fr;
+  }
+
+  .about-grid {
+    gap: 22px;
   }
 
   .section-heading {
@@ -669,6 +756,7 @@ a:focus-visible {
   }
 
   .section-heading h2,
+  .about-grid h2,
   .background-intro h2,
   .contact-inner h2 {
     font-size: 37px;
@@ -699,6 +787,11 @@ a:focus-visible {
 
   .contact-section {
     padding: 52px 0 60px;
+  }
+
+  .news-list li {
+    grid-template-columns: 95px minmax(0, 1fr);
+    gap: 16px;
   }
 }
 
@@ -756,6 +849,16 @@ a:focus-visible {
 
   .publication-body h4 {
     font-size: 19px;
+  }
+
+  .news-list li {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 16px 0;
+  }
+
+  .about-copy {
+    font-size: 16px;
   }
 
   .experience-item {
