@@ -519,7 +519,6 @@ a:focus-visible {
   font-weight: 700;
 }
 
-.venue-separator,
 .dot-separator {
   padding: 0 6px;
   color: var(--line-strong);
