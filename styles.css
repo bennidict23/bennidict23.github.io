@@ -241,9 +241,10 @@ a:focus-visible {
   display: grid;
   grid-template-columns: 260px minmax(0, 1fr);
   gap: 75px;
+  margin-top: 28px;
 }
 
-.about-grid h2 {
+.about-section h2 {
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 44px;
@@ -253,7 +254,6 @@ a:focus-visible {
 .about-portrait {
   width: 220px;
   height: auto;
-  margin-top: 28px;
 }
 
 .about-copy {
@@ -740,11 +740,11 @@ a:focus-visible {
 
   .about-grid {
     gap: 22px;
+    margin-top: 22px;
   }
 
   .about-portrait {
     width: 190px;
-    margin-top: 22px;
   }
 
   .section-heading {
@@ -753,7 +753,7 @@ a:focus-visible {
   }
 
   .section-heading h2,
-  .about-grid h2,
+  .about-section h2,
   .background-intro h2,
   .contact-inner h2 {
     font-size: 37px;
