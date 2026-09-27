@@ -356,12 +356,6 @@ a:focus-visible {
   line-height: 1.15;
 }
 
-.section-note {
-  margin: 0 0 3px;
-  color: var(--muted);
-  font-size: 15px;
-}
-
 .featured-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
