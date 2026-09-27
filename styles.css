@@ -250,6 +250,12 @@ a:focus-visible {
   line-height: 1.15;
 }
 
+.about-portrait {
+  width: 220px;
+  height: auto;
+  margin-top: 28px;
+}
+
 .about-copy {
   max-width: 755px;
   color: var(--muted);
@@ -734,6 +740,11 @@ a:focus-visible {
 
   .about-grid {
     gap: 22px;
+  }
+
+  .about-portrait {
+    width: 190px;
+    margin-top: 22px;
   }
 
   .section-heading {
