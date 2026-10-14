@@ -91,8 +91,7 @@ a:focus-visible {
   color: var(--ink);
   text-decoration: none;
 }
-.brand span,
-.name-period {
+.brand span {
   color: var(--rust);
 }
 .site-nav {
@@ -140,8 +139,6 @@ a:focus-visible {
 .about-copy {
   min-width: 0;
 }
-.eyebrow,
-.section-index,
 .feature-kicker,
 .experience-date {
   margin: 0;
@@ -150,14 +147,10 @@ a:focus-visible {
   line-height: 1.4;
   text-transform: uppercase;
 }
-.eyebrow {
-  margin-bottom: 8px;
-  color: var(--green);
-}
 h1 {
   margin: 0;
   font-family: var(--serif);
-  font-size: 52px;
+  font-size: 40px;
   line-height: 1.1;
   font-weight: 700;
 }
@@ -173,6 +166,20 @@ h1 {
 }
 .about-copy > p {
   margin: 0 0 12px;
+}
+.interests-heading {
+  margin: 16px 0 6px;
+  color: var(--ink);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.research-interests {
+  margin: 0 0 12px;
+  padding-left: 22px;
+}
+.research-interests li {
+  padding-left: 2px;
 }
 .profile-links {
   display: flex;
@@ -202,14 +209,9 @@ h1 {
 .section-heading {
   margin-bottom: 26px;
 }
-.section-index {
-  margin-bottom: 8px;
-  color: var(--rust);
-}
 .section-heading h2 {
   margin: 0;
-  font-family: var(--serif);
-  font-size: 34px;
+  font-size: 28px;
   line-height: 1.15;
 }
 .compact-heading {
@@ -218,15 +220,11 @@ h1 {
   gap: 22px;
   margin-bottom: 13px;
 }
-.compact-heading .section-index {
-  order: 2;
-  margin: 0;
-}
 .compact-heading h2 {
   font-size: 27px;
 }
 .news-section {
-  background: var(--soft);
+  background: var(--paper);
   border-block: 1px solid var(--line);
   padding: 24px 0 26px;
 }
@@ -548,10 +546,6 @@ h1 {
   .profile-heading {
     align-self: center;
   }
-  .eyebrow {
-    font-size: 10px;
-    margin-bottom: 9px;
-  }
   h1 {
     font-size: 28px;
     line-height: 1.15;
@@ -579,9 +573,6 @@ h1 {
   }
   .compact-heading h2 {
     font-size: 25px;
-  }
-  .section-index {
-    font-size: 10px;
   }
   .news-list li {
     grid-template-columns: 64px minmax(0, 1fr);
