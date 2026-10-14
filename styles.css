@@ -585,8 +585,12 @@ h1 {
     line-height: 1.7;
   }
   .profile-links {
-    margin-top: 14px;
-    gap: 12px 24px;
+    margin-top: 10px;
+    gap: 8px 12px;
+  }
+  .profile-links a {
+    gap: 5px;
+    font-size: 12px;
   }
   .about-copy .availability {
     font-size: 11px;
