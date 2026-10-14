@@ -1,16 +1,13 @@
 (() => {
   const key = "chubin-homepage-theme";
-  const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
-  let preference;
+  let theme = "light";
 
   try {
     const saved = localStorage.getItem(key);
-    if (saved === "light" || saved === "dark") preference = saved;
+    if (saved === "light" || saved === "dark") theme = saved;
   } catch {
     // Storage can be unavailable in private or embedded browsers.
   }
-
-  let theme = preference || (systemTheme.matches ? "dark" : "light");
 
   const applyTheme = (value) => {
     theme = value;
@@ -42,22 +39,12 @@
   document.addEventListener("DOMContentLoaded", () => {
     applyTheme(theme);
     document.getElementById("theme-toggle").addEventListener("click", () => {
-      preference = theme === "dark" ? "light" : "dark";
-      applyTheme(preference);
+      applyTheme(theme === "dark" ? "light" : "dark");
       try {
-        localStorage.setItem(key, preference);
+        localStorage.setItem(key, theme);
       } catch {
         // Switching still works when the preference cannot be persisted.
       }
     });
   });
-
-  const followSystemTheme = (event) => {
-    if (!preference) applyTheme(event.matches ? "dark" : "light");
-  };
-  if (systemTheme.addEventListener) {
-    systemTheme.addEventListener("change", followSystemTheme);
-  } else {
-    systemTheme.addListener(followSystemTheme);
-  }
 })();
