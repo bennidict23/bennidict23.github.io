@@ -181,6 +181,9 @@ h1 {
 .research-interests li {
   padding-left: 2px;
 }
+.research-interests li + li {
+  margin-top: 6px;
+}
 .profile-links {
   display: flex;
   flex-wrap: wrap;
