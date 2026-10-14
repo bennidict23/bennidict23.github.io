@@ -201,7 +201,8 @@ h1 {
 .research-interests li + li {
   margin-top: 6px;
 }
-.research-interests strong {
+.research-interests strong,
+.opportunity-note strong {
   color: var(--ink);
   font-weight: 600;
 }
