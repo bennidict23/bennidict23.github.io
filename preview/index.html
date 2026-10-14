@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Chubin Zhang | AI Researcher</title>
+  <meta name="description" content="Chubin Zhang - Research Assistant at NTU. Researching Reinforcement Learning, Diffusion Models, Robot Learning, and AI Agents." />
+
+  <!-- Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    }
+    .glass-nav {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .pub-card {
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .pub-card:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+
+<body class="bg-[#FAFAFA] text-slate-800 dark:bg-[#0B0F19] dark:text-slate-200 antialiased selection:bg-brand-500 selection:text-white transition-colors duration-200">
+
+  <!-- Sticky Top Navigation -->
+  <header class="sticky top-0 z-50 glass-nav bg-white/80 dark:bg-[#0B0F19]/80 border-b border-slate-200/70 dark:border-slate-800/80">
+    <div class="max-w-4xl mx-auto px-5 h-16 flex items-center justify-between">
+      <a href="#" class="font-display font-bold text-lg tracking-tight text-slate-900 dark:text-white flex items-center gap-2">
+        <span>Chubin Zhang</span>
+        <span class="text-xs font-mono font-medium px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">张楚彬</span>
+      </a>
+
+      <nav class="flex items-center gap-5 text-sm font-medium text-slate-600 dark:text-slate-400">
+        <a href="#about" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors hidden sm:inline">About</a>
+        <a href="#publications" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Publications</a>
+        <a href="#experience" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Experience</a>
+
+        <!-- Theme Toggle Button -->
+        <button id="theme-toggle" aria-label="Toggle Dark Mode" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+          <svg id="theme-icon-dark" class="w-4 h-4 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+          <svg id="theme-icon-light" class="w-4 h-4 hidden" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-5 py-12 space-y-16">
+
+    <!-- HERO / ABOUT SECTION -->
+    <section id="about" class="space-y-8">
+      <div class="flex flex-col-reverse md:flex-row items-start md:items-center justify-between gap-8">
+
+        <!-- Left Bio Content -->
+        <div class="flex-1 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-brand-50 dark:bg-brand-500/10 text-brand-700 dark:text-brand-300 border border-brand-200/60 dark:border-brand-500/20">
+            <span class="w-2 h-2 rounded-full bg-brand-600 dark:bg-brand-400 animate-pulse"></span>
+            Research Assistant @ NTU Singapore
+          </div>
+
+          <h1 class="font-display text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+            Chubin Zhang
+          </h1>
+
+          <p class="text-base leading-relaxed text-slate-600 dark:text-slate-300">
+            I am currently a Research Assistant at <strong>Nanyang Technological University (NTU)</strong>, fortunate to be advised by <a href="https://personal.ntu.edu.sg/boan/" target="_blank" rel="noopener noreferrer" class="text-brand-600 dark:text-brand-400 font-medium hover:underline">Prof. Bo An</a>. Previously, I worked as a Research Intern at <strong>A*STAR Centre for Frontier AI Research (CFAR)</strong> advised by <a href="https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang" target="_blank" rel="noopener noreferrer" class="text-brand-600 dark:text-brand-400 font-medium hover:underline">Prof. Ivor Tsang</a>, and at <strong>Tsinghua University (THUNLP)</strong> advised by <a href="https://nlp.csai.tsinghua.edu.cn/~lzy/" target="_blank" rel="noopener noreferrer" class="text-brand-600 dark:text-brand-400 font-medium hover:underline">Prof. Zhiyuan Liu</a>. I received my B.Eng. degree with <em>First Class Honours</em> (Top 12%) from <strong>BUPT</strong> in 2026.
+          </p>
+
+          <p class="text-base leading-relaxed text-slate-600 dark:text-slate-300">
+            My research focuses on building <strong>principled, expressive, and controllable decision-making systems</strong>. Specifically, my work spans two closely connected threads:
+          </p>
+
+          <ul class="space-y-1.5 text-sm sm:text-base text-slate-600 dark:text-slate-300 list-disc list-inside">
+            <li><strong>Generative &amp; Online Reinforcement Learning:</strong> Decoupling policy optimization from expressive diffusion/flow generation for continuous control &amp; robot learning (e.g., <em>GoRL</em>, ICML 2026).</li>
+            <li><strong>Reliable &amp; Controllable AI Agents:</strong> Intervention advantage, calibration, and evidence-grounded stopping decisions in tool-using LLM agents (e.g., NeurIPS 2026).</li>
+          </ul>
+
+          <!-- Quick Action Links -->
+          <div class="pt-2 flex flex-wrap items-center gap-2.5">
+            <a href="mailto:z1175085991@gmail.com" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg text-sm font-medium bg-slate-900 text-white dark:bg-white dark:text-slate-900 hover:opacity-90 transition">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+              Email
+            </a>
+            <a href="https://github.com/bennidict23" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg text-sm font-medium bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-700 hover:border-brand-500 transition">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.650 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Profile Photo -->
+        <div class="w-36 h-36 sm:w-44 sm:h-44 shrink-0 rounded-2xl overflow-hidden border-2 border-white dark:border-slate-800 shadow-lg bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 flex flex-col items-center justify-center relative group">
+          <img src="../assets/chubin-portrait.jpg" alt="Chubin Zhang" class="w-full h-full object-cover" style="object-position: 50% 18%;" />
+        </div>
+
+      </div>
+
+      <!-- HIGH-IMPACT RECRUITING CALLOUT BANNER -->
+      <div class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-brand-600/10 via-indigo-500/10 to-purple-500/10 dark:from-brand-500/15 dark:via-indigo-500/10 dark:to-purple-500/15 border border-brand-500/30 p-5 sm:p-6">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2 text-brand-700 dark:text-brand-300 font-display font-bold text-sm uppercase tracking-wider">
+              <span>📌 Open to Opportunities (2027 Fall PhD &amp; Internships)</span>
+            </div>
+            <p class="text-sm sm:text-base text-slate-700 dark:text-slate-200 font-medium">
+              I am actively looking for <strong>PhD positions starting in Fall 2027</strong> and am also open to <strong>industry research internships</strong> in Reinforcement Learning, Diffusion/Generative Models, Robot Learning, and AI Agents. Feel free to reach out!
+            </p>
+          </div>
+          <a href="mailto:z1175085991@gmail.com?subject=PhD%20/%20Research%20Opportunity%20Inquiry" class="shrink-0 inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-sm font-semibold bg-brand-600 text-white hover:bg-brand-700 shadow-sm transition">
+            <span>Get in Touch</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH HIGHLIGHTS / METRICS BAR -->
+    <section class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+      <div class="p-4 rounded-xl bg-white dark:bg-slate-900/90 border border-slate-200/80 dark:border-slate-800">
+        <div class="text-2xl font-display font-extrabold text-slate-900 dark:text-white">5 <span class="text-sm font-normal text-slate-500">Top-Tier</span></div>
+        <div class="text-xs font-medium text-slate-500 dark:text-slate-400 mt-0.5">2× NeurIPS, 2× ICML, 1× AAAI</div>
+      </div>
+      <div class="p-4 rounded-xl bg-white dark:bg-slate-900/90 border border-slate-200/80 dark:border-slate-800">
+        <div class="text-2xl font-display font-extrabold text-brand-600 dark:text-brand-400">3 <span class="text-sm font-normal text-slate-500">Lead-Author</span></div>
+        <div class="text-xs font-medium text-slate-500 dark:text-slate-400 mt-0.5">NeurIPS'26, ICML'26, Preprint</div>
+      </div>
+      <div class="p-4 rounded-xl bg-white dark:bg-slate-900/90 border border-slate-200/80 dark:border-slate-800">
+        <div class="text-2xl font-display font-extrabold text-slate-900 dark:text-white">&gt;3× <span class="text-sm font-normal text-slate-500">Return</span></div>
+        <div class="text-xs font-medium text-slate-500 dark:text-slate-400 mt-0.5">GoRL on HopperStand Control</div>
+      </div>
+      <div class="p-4 rounded-xl bg-white dark:bg-slate-900/90 border border-slate-200/80 dark:border-slate-800">
+        <div class="text-2xl font-display font-extrabold text-slate-900 dark:text-white">Top 12%</div>
+        <div class="text-xs font-medium text-slate-500 dark:text-slate-400 mt-0.5">First Class Honours @ BUPT</div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS SECTION -->
+    <section id="publications" class="space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 dark:border-slate-800 pb-4">
+        <div>
+          <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">Publications &amp; Preprints</h2>
+          <p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">Filter by research thread or authorship role.</p>
+        </div>
+
+        <!-- Interactive Filter Tabs -->
+        <div class="flex flex-wrap gap-1.5 bg-slate-100 dark:bg-slate-800/90 p-1 rounded-xl text-xs font-medium">
+          <button onclick="filterPubs('all')" data-filter="all" class="pub-filter-btn active px-3 py-1.5 rounded-lg bg-white dark:bg-slate-900 text-slate-900 dark:text-white shadow-sm transition">All (6)</button>
+          <button onclick="filterPubs('first')" data-filter="first" class="pub-filter-btn px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition">First-Author (3)</button>
+          <button onclick="filterPubs('rl-diffusion')" data-filter="rl-diffusion" class="pub-filter-btn px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition">RL &amp; Diffusion</button>
+          <button onclick="filterPubs('agents')" data-filter="agents" class="pub-filter-btn px-3 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition">LLM &amp; Agents</button>
+        </div>
+      </div>
+
+      <div id="pub-list" class="space-y-4">
+
+        <!-- [P1] NeurIPS 2026 First Author -->
+        <article class="pub-card group rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 p-5 shadow-sm hover:border-brand-500/50" data-tags="all first agents">
+          <div class="flex flex-col md:flex-row gap-5 items-start">
+            <!-- Visual Concept Schematic (SVG Teaser) -->
+            <div class="w-full md:w-48 h-32 shrink-0 rounded-xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200/60 dark:border-slate-700/60 flex flex-col items-center justify-center p-3 relative overflow-hidden">
+              <span class="absolute top-2 left-2 text-[10px] font-mono px-1.5 py-0.5 rounded bg-purple-100 dark:bg-purple-500/20 text-purple-700 dark:text-purple-300 font-semibold">NeurIPS 2026</span>
+              <svg class="w-28 h-16 text-brand-500 mt-3" viewBox="0 0 140 70" fill="none">
+                <rect x="6" y="20" width="38" height="30" rx="5" stroke="currentColor" stroke-width="2"/>
+                <text x="25" y="38" text-anchor="middle" fill="currentColor" font-size="8" font-family="monospace">Agent</text>
+                <path d="M44 35 H82" stroke="currentColor" stroke-width="2" stroke-dasharray="3 3"/>
+                <circle cx="63" cy="35" r="8" fill="#6366f1" fill-opacity="0.2" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M63 15 V27" stroke="#ec4899" stroke-width="2"/>
+                <text x="63" y="12" text-anchor="middle" fill="#ec4899" font-size="7" font-weight="bold">Oversight</text>
+                <rect x="82" y="20" width="50" height="30" rx="5" stroke="#10b981" stroke-width="2"/>
+                <text x="107" y="38" text-anchor="middle" fill="#10b981" font-size="7.5" font-family="monospace">Control Δ</text>
+              </svg>
+            </div>
+
+            <div class="flex-1 space-y-2">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-purple-100 text-purple-800 dark:bg-purple-500/20 dark:text-purple-300">NeurIPS 2026</span>
+                <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-amber-100 text-amber-800 dark:bg-amber-500/20 dark:text-amber-300">★ First Author</span>
+              </div>
+
+              <h3 class="font-display font-bold text-base sm:text-lg text-slate-900 dark:text-white leading-snug">
+                Calibration Is Not Control: Intervention Value for LLM-Agent Oversight
+              </h3>
+
+              <p class="text-sm text-slate-600 dark:text-slate-400">
+                <strong class="text-slate-900 dark:text-white underline decoration-brand-500 decoration-2 underline-offset-4">Chubin Zhang</strong>, Zhenglin Wan, Xingrui Yu, Jingxuan Wu, Qi Wen, Pengfei Zhou, Wangbo Zhao, Ivor Tsang
+              </p>
+
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-800/50 p-2.5 rounded-lg border-l-2 border-brand-500">
+                <strong>TL;DR:</strong> Demonstrates why standard uncertainty calibration alone fails to guarantee effective oversight in autonomous LLM agents, and introduces <em>Intervention Advantage</em> to quantify and optimize human/verifier control utility.
+              </p>
+
+              <div class="pt-1 flex flex-wrap items-center gap-2 text-xs font-mono">
+                <a href="https://arxiv.org/abs/2606.21399" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 hover:bg-brand-600 hover:text-white transition">[Paper]</a>
+                <a href="https://github.com/bennidict23/calibration-is-not-control" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 hover:bg-brand-600 hover:text-white transition">[Code]</a>
+                <button onclick="toggleBib('bib-p1')" class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 hover:bg-brand-600 hover:text-white transition">[BibTeX]</button>
+              </div>
+
+              <pre id="bib-p1" class="hidden mt-2 p-3 rounded-lg bg-slate-900 text-slate-200 text-xs font-mono overflow-x-auto">@inproceedings{zhang2026calibration,
+  title={Calibration Is Not Control: Intervention Value for LLM-Agent Oversight},
+  author={Zhang, Chubin and Wan, Zhenglin and Yu, Xingrui and Wu, Jingxuan and Wen, Qi and Zhou, Pengfei and Zhao, Wangbo and Tsang, Ivor},
+  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
+  year={2026}
+}</pre>
+            </div>
+          </div>
+        </article>
+
+        <!-- [P2] ICML 2026 First Author (GoRL) -->
+        <article class="pub-card group rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 p-5 shadow-sm hover:border-brand-500/50" data-tags="all first rl-diffusion">
+          <div class="flex flex-col md:flex-row gap-5 items-start">
+            <div class="w-full md:w-48 h-32 shrink-0 rounded-xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200/60 dark:border-slate-700/60 flex flex-col items-center justify-center p-3 relative overflow-hidden">
+              <span class="absolute top-2 left-2 text-[10px] font-mono px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 font-semibold">ICML 2026</span>
+              <svg class="w-28 h-16 text-blue-500 mt-3" viewBox="0 0 140 70" fill="none">
+                <circle cx="28" cy="38" r="14" stroke="currentColor" stroke-width="2"/>
+                <text x="28" y="41" text-anchor="middle" fill="currentColor" font-size="7.5" font-family="monospace">Latent π</text>
+                <path d="M42 38 H74" stroke="currentColor" stroke-width="2"/>
+                <rect x="74" y="22" width="56" height="32" rx="6" stroke="#10b981" stroke-width="2"/>
+                <text x="102" y="36" text-anchor="middle" fill="#10b981" font-size="7.5" font-family="monospace">Diffusion/Flow</text>
+                <text x="102" y="47" text-anchor="middle" fill="#10b981" font-size="7" font-weight="bold">&gt;3x Return</text>
+              </svg>
+            </div>
+
+            <div class="flex-1 space-y-2">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-blue-100 text-blue-800 dark:bg-blue-500/20 dark:text-blue-300">ICML 2026</span>
+                <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-amber-100 text-amber-800 dark:bg-amber-500/20 dark:text-amber-300">★ First Author</span>
+              </div>
+
+              <h3 class="font-display font-bold text-base sm:text-lg text-slate-900 dark:text-white leading-snug">
+                Generative Online Reinforcement Learning (GoRL)
+              </h3>
+
+              <p class="text-sm text-slate-600 dark:text-slate-400">
+                <strong class="text-slate-900 dark:text-white underline decoration-brand-500 decoration-2 underline-offset-4">Chubin Zhang</strong>, Zhenglin Wan, Feng Chen, Fuchao Yang, Lang Feng, Yaxin Zhou, Xingrui Yu, Yang You, Ivor Tsang, Bo An
+              </p>
+
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-800/50 p-2.5 rounded-lg border-l-2 border-blue-500">
+                <strong>TL;DR:</strong> Decouples policy optimization from multimodal action generation via a tractable latent policy and diffusion/flow decoders with two-timescale training—stabilizing online RL without backpropagating through long sampling chains and achieving <strong>&gt;3× return</strong> over the strongest baseline on HopperStand.
+              </p>
+
+              <div class="pt-1 flex flex-wrap items-center gap-2 text-xs font-mono">
+                <a href="https://arxiv.org/abs/2512.02581" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 hover:bg-brand-600 hover:text-white transition">[Paper]</a>
+                <a href="https://github.com/bennidict23/GoRL" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 hover:bg-brand-600 hover:text-white transition">[Code Released]</a>
+                <button onclick="toggleBib('bib-p2')" class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 hover:bg-brand-600 hover:text-white transition">[BibTeX]</button>
+              </div>
+
+              <pre id="bib-p2" class="hidden mt-2 p-3 rounded-lg bg-slate-900 text-slate-200 text-xs font-mono overflow-x-auto">@inproceedings{zhang2026gorl,
+  title={Generative Online Reinforcement Learning},
+  author={Zhang, Chubin and Wan, Zhenglin and Chen, Feng and Yang, Fuchao and Feng, Lang and Zhou, Yaxin and Yu, Xingrui and You, Yang and Tsang, Ivor and An, Bo},
+  booktitle={International Conference on Machine Learning (ICML)},
+  year={2026}
+}</pre>
+            </div>
+          </div>
+        </article>
+
+        <!-- [P6] Preprint 2026 First Author -->
+        <article class="pub-card group rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 p-5 shadow-sm hover:border-brand-500/50" data-tags="all first agents">
+          <div class="flex flex-col md:flex-row gap-5 items-start">
+            <div class="w-full md:w-48 h-32 shrink-0 rounded-xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200/60 dark:border-slate-700/60 flex flex-col items-center justify-center p-3 relative overflow-hidden">
+              <span class="absolute top-2 left-2 text-[10px] font-mono px-1.5 py-0.5 rounded bg-rose-100 dark:bg-rose-500/20 text-rose-700 dark:text-rose-300 font-semibold">Preprint 2026</span>
+              <svg class="w-28 h-16 text-rose-500 mt-3" viewBox="0 0 140 70" fill="none">
+                <rect x="10" y="20" width="45" height="28" rx="4" stroke="currentColor" stroke-width="1.8"/>
+                <text x="32" y="37" text-anchor="middle" fill="currentColor" font-size="7.5" font-family="monospace">Useless?</text>
+                <path d="M55 34 H85" stroke="currentColor" stroke-width="1.8"/>
+                <rect x="85" y="20" width="45" height="28" rx="4" stroke="#f59e0b" stroke-width="1.8"/>
+                <text x="107" y="37" text-anchor="middle" fill="#f59e0b" font-size="7" font-family="monospace">Query Loop</text>
+              </svg>
+            </div>
+
+            <div class="flex-1 space-y-2">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-slate-200 text-slate-800 dark:bg-slate-800 dark:text-slate-300">arXiv Preprint 2026</span>
+                <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-amber-100 text-amber-800 dark:bg-amber-500/20 dark:text-amber-300">★ First Author</span>
+              </div>
+
+              <h3 class="font-display font-bold text-base sm:text-lg text-slate-900 dark:text-white leading-snug">
+                Judged Useless, Queried Anyway: Tool-Using Agents Rarely Turn Their Own Evidence Judgments into Stopping Decisions
+              </h3>
+
+              <p class="text-sm text-slate-600 dark:text-slate-400">
+                <strong class="text-slate-900 dark:text-white underline decoration-brand-500 decoration-2 underline-offset-4">Chubin Zhang</strong>, Zhenglin Wan, Xingrui Yu, Jingxuan Wu, Yaxin Zhou, Ivor Tsang, Bo An
+              </p>
+
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-800/50 p-2.5 rounded-lg border-l-2 border-rose-500">
+                <strong>TL;DR:</strong> Uncovers a critical belief-action gap in tool-using LLM agents: even when agents explicitly judge retrieved evidence as unhelpful, they rarely translate that judgment into early stopping decisions.
+              </p>
+
+              <div class="pt-1 flex flex-wrap items-center gap-2 text-xs font-mono">
+                <a href="https://arxiv.org/abs/2610.06191" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 hover:bg-brand-600 hover:text-white transition">[arXiv]</a>
+                <a href="https://github.com/bennidict23/judged-useless-queried-anyway" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 hover:bg-brand-600 hover:text-white transition">[Code]</a>
+                <button onclick="toggleBib('bib-p6')" class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 hover:bg-brand-600 hover:text-white transition">[BibTeX]</button>
+              </div>
+
+              <pre id="bib-p6" class="hidden mt-2 p-3 rounded-lg bg-slate-900 text-slate-200 text-xs font-mono overflow-x-auto">@article{zhang2026judged,
+  title={Judged Useless, Queried Anyway: Tool-Using Agents Rarely Turn Their Own Evidence Judgments into Stopping Decisions},
+  author={Zhang, Chubin and Wan, Zhenglin and Yu, Xingrui and Wu, Jingxuan and Zhou, Yaxin and Tsang, Ivor and An, Bo},
+  journal={arXiv preprint},
+  year={2026}
+}</pre>
+            </div>
+          </div>
+        </article>
+
+        <!-- [P3] NeurIPS 2026 Co-author -->
+        <article class="pub-card group rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 p-5 shadow-sm hover:border-brand-500/50" data-tags="all rl-diffusion">
+          <div class="flex flex-col md:flex-row gap-5 items-start">
+            <div class="w-full md:w-48 h-28 shrink-0 rounded-xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200/60 dark:border-slate-700/60 flex flex-col items-center justify-center p-3 relative">
+              <span class="absolute top-2 left-2 text-[10px] font-mono px-1.5 py-0.5 rounded bg-purple-100 dark:bg-purple-500/20 text-purple-700 dark:text-purple-300 font-semibold">NeurIPS 2026</span>
+              <span class="font-mono text-xs text-slate-400 mt-3">Diffusion LM Schedule</span>
+            </div>
+
+            <div class="flex-1 space-y-1.5">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-purple-100 text-purple-800 dark:bg-purple-500/20 dark:text-purple-300">NeurIPS 2026</span>
+              </div>
+              <h3 class="font-display font-bold text-base sm:text-lg text-slate-900 dark:text-white">
+                Denoising Time Matters: Diverse Generation in Diffusion Language Models
+              </h3>
+              <p class="text-sm text-slate-600 dark:text-slate-400">
+                Jingxuan Wu, Zhenglin Wan, Yuzhe Yang, Yiqiao Huang, <strong class="text-slate-900 dark:text-white underline decoration-brand-500 decoration-2 underline-offset-4">Chubin Zhang</strong>, Xingrui Yu, Ivor Tsang, Yang You
+              </p>
+              <div class="pt-1 flex flex-wrap items-center gap-2 text-xs font-mono">
+                <a href="https://arxiv.org/abs/2601.22629" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 hover:bg-brand-600 hover:text-white transition">[Paper]</a>
+                <button onclick="toggleBib('bib-p3')" class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 hover:bg-brand-600 hover:text-white transition">[BibTeX]</button>
+              </div>
+              <pre id="bib-p3" class="hidden mt-2 p-3 rounded-lg bg-slate-900 text-slate-200 text-xs font-mono overflow-x-auto">@inproceedings{wu2026denoising,
+  title={Denoising Time Matters: Diverse Generation in Diffusion Language Models},
+  author={Wu, Jingxuan and Wan, Zhenglin and Yang, Yuzhe and Huang, Yiqiao and Zhang, Chubin and Yu, Xingrui and Tsang, Ivor and You, Yang},
+  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
+  year={2026}
+}</pre>
+            </div>
+          </div>
+        </article>
+
+        <!-- [P4] ICML 2026 Co-author -->
+        <article class="pub-card group rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 p-5 shadow-sm hover:border-brand-500/50" data-tags="all rl-diffusion">
+          <div class="flex flex-col md:flex-row gap-5 items-start">
+            <div class="w-full md:w-48 h-28 shrink-0 rounded-xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200/60 dark:border-slate-700/60 flex flex-col items-center justify-center p-3 relative">
+              <span class="absolute top-2 left-2 text-[10px] font-mono px-1.5 py-0.5 rounded bg-blue-100 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 font-semibold">ICML 2026</span>
+              <span class="font-mono text-xs text-slate-400 mt-3">On-Policy Distillation</span>
+            </div>
+
+            <div class="flex-1 space-y-1.5">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-blue-100 text-blue-800 dark:bg-blue-500/20 dark:text-blue-300">ICML 2026</span>
+              </div>
+              <h3 class="font-display font-bold text-base sm:text-lg text-slate-900 dark:text-white">
+                Adversarial Dual On-Policy Distillation from Expressive Teacher
+              </h3>
+              <p class="text-sm text-slate-600 dark:text-slate-400">
+                Zhenglin Wan, Jingxuan Wu, Xingrui Yu, <strong class="text-slate-900 dark:text-white underline decoration-brand-500 decoration-2 underline-offset-4">Chubin Zhang</strong>, Mingcong Lei, Bo An, Ivor Tsang, Yang You
+              </p>
+              <div class="pt-1 flex flex-wrap items-center gap-2 text-xs font-mono">
+                <a href="https://arxiv.org/abs/2605.27095" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 hover:bg-brand-600 hover:text-white transition">[Paper]</a>
+                <button onclick="toggleBib('bib-p4')" class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 hover:bg-brand-600 hover:text-white transition">[BibTeX]</button>
+              </div>
+              <pre id="bib-p4" class="hidden mt-2 p-3 rounded-lg bg-slate-900 text-slate-200 text-xs font-mono overflow-x-auto">@inproceedings{wan2026adversarial,
+  title={Adversarial Dual On-Policy Distillation from Expressive Teacher},
+  author={Wan, Zhenglin and Wu, Jingxuan and Yu, Xingrui and Zhang, Chubin and Lei, Mingcong and An, Bo and Tsang, Ivor and You, Yang},
+  booktitle={International Conference on Machine Learning (ICML)},
+  year={2026}
+}</pre>
+            </div>
+          </div>
+        </article>
+
+        <!-- [P5] AAAI 2026 Co-author -->
+        <article class="pub-card group rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 p-5 shadow-sm hover:border-brand-500/50" data-tags="all agents">
+          <div class="flex flex-col md:flex-row gap-5 items-start">
+            <div class="w-full md:w-48 h-28 shrink-0 rounded-xl bg-slate-50 dark:bg-slate-800/70 border border-slate-200/60 dark:border-slate-700/60 flex flex-col items-center justify-center p-3 relative">
+              <span class="absolute top-2 left-2 text-[10px] font-mono px-1.5 py-0.5 rounded bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300 font-semibold">AAAI 2026</span>
+              <span class="font-mono text-xs text-slate-400 mt-3">LexChain Reasoning</span>
+            </div>
+
+            <div class="flex-1 space-y-1.5">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="px-2.5 py-0.5 rounded-md text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-500/20 dark:text-emerald-300">AAAI 2026</span>
+              </div>
+              <h3 class="font-display font-bold text-base sm:text-lg text-slate-900 dark:text-white">
+                LexChain: Modeling Legal Reasoning Chains for Chinese Tort Case Analysis
+              </h3>
+              <p class="text-sm text-slate-600 dark:text-slate-400">
+                Huiyuan Xie, Chenyang Li, Huining Zhu, <strong class="text-slate-900 dark:text-white underline decoration-brand-500 decoration-2 underline-offset-4">Chubin Zhang</strong>, Yuxiao Ye, Zhenghao Liu, Zhiyuan Liu
+              </p>
+              <div class="pt-1 flex flex-wrap items-center gap-2 text-xs font-mono">
+                <a href="https://doi.org/10.1609/aaai.v40i42.40906" target="_blank" rel="noopener noreferrer" class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 hover:bg-brand-600 hover:text-white transition">[Paper]</a>
+                <button onclick="toggleBib('bib-p5')" class="px-2.5 py-1 rounded bg-slate-100 dark:bg-slate-800 hover:bg-brand-600 hover:text-white transition">[BibTeX]</button>
+              </div>
+              <pre id="bib-p5" class="hidden mt-2 p-3 rounded-lg bg-slate-900 text-slate-200 text-xs font-mono overflow-x-auto">@inproceedings{xie2026lexchain,
+  title={LexChain: Modeling Legal Reasoning Chains for Chinese Tort Case Analysis},
+  author={Xie, Huiyuan and Li, Chenyang and Zhu, Huining and Zhang, Chubin and Ye, Yuxiao and Liu, Zhenghao and Liu, Zhiyuan},
+  booktitle={AAAI Conference on Artificial Intelligence (AAAI)},
+  year={2026}
+}</pre>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- RESEARCH EXPERIENCE & EDUCATION -->
+    <section id="experience" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+      <!-- Research Experience Column -->
+      <div class="space-y-5">
+        <h2 class="font-display text-xl font-bold text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-800 pb-3">
+          Research Experience
+        </h2>
+
+        <div class="relative pl-6 border-l-2 border-slate-200 dark:border-slate-800 space-y-7">
+
+          <div class="relative">
+            <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-brand-600 ring-4 ring-[#FAFAFA] dark:ring-[#0B0F19]"></span>
+            <div class="text-xs font-mono text-brand-600 dark:text-brand-400 font-semibold">2026 – Present</div>
+            <h3 class="font-display font-bold text-base text-slate-900 dark:text-white mt-0.5">Nanyang Technological University (NTU)</h3>
+            <div class="text-sm text-slate-600 dark:text-slate-400">Research Assistant · Singapore</div>
+            <div class="text-xs text-slate-500 mt-1">Advisor: <a href="https://personal.ntu.edu.sg/boan/" target="_blank" rel="noopener noreferrer" class="underline hover:text-brand-500">Prof. Bo An</a></div>
+          </div>
+
+          <div class="relative">
+            <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-slate-400 dark:bg-slate-600 ring-4 ring-[#FAFAFA] dark:ring-[#0B0F19]"></span>
+            <div class="text-xs font-mono text-slate-500">Aug. 2025 – Feb. 2026</div>
+            <h3 class="font-display font-bold text-base text-slate-900 dark:text-white mt-0.5">A*STAR Centre for Frontier AI Research (CFAR)</h3>
+            <div class="text-sm text-slate-600 dark:text-slate-400">Research Intern · Singapore</div>
+            <div class="text-xs text-slate-500 mt-1">Advisor: <a href="https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang" target="_blank" rel="noopener noreferrer" class="underline hover:text-brand-500">Prof. Ivor Tsang</a></div>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1.5 leading-relaxed">
+              Developed <em>GoRL</em> (ICML'26), decoupling policy optimization from diffusion/flow action generation with two-timescale training (&gt;3× return on HopperStand).
+            </p>
+          </div>
+
+          <div class="relative">
+            <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-slate-400 dark:bg-slate-600 ring-4 ring-[#FAFAFA] dark:ring-[#0B0F19]"></span>
+            <div class="text-xs font-mono text-slate-500">Sep. 2024 – Aug. 2025</div>
+            <h3 class="font-display font-bold text-base text-slate-900 dark:text-white mt-0.5">Tsinghua University (THUNLP)</h3>
+            <div class="text-sm text-slate-600 dark:text-slate-400">Research Intern · Beijing, China</div>
+            <div class="text-xs text-slate-500 mt-1">Advisor: <a href="https://nlp.csai.tsinghua.edu.cn/~lzy/" target="_blank" rel="noopener noreferrer" class="underline hover:text-brand-500">Prof. Zhiyuan Liu</a></div>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1.5 leading-relaxed">
+              Co-developed <em>LexChain</em> (AAAI'26), a modular legal reasoning framework with SFT and reasoning-chain evaluation benchmarks.
+            </p>
+          </div>
+
+          <div class="relative">
+            <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-slate-400 dark:bg-slate-600 ring-4 ring-[#FAFAFA] dark:ring-[#0B0F19]"></span>
+            <div class="text-xs font-mono text-slate-500">Apr. 2025 – Aug. 2025</div>
+            <h3 class="font-display font-bold text-base text-slate-900 dark:text-white mt-0.5">BUPT</h3>
+            <div class="text-sm text-slate-600 dark:text-slate-400">Research Intern · Beijing, China</div>
+            <div class="text-xs text-slate-500 mt-1">Advisor: Prof. Guoshun Nan</div>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1.5 leading-relaxed">
+              Formulated game-theoretic defenses for semantic-level adversarial robustness in wireless semantic communication.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Education & Technical Stack Column -->
+      <div class="space-y-8">
+        <div class="space-y-5">
+          <h2 class="font-display text-xl font-bold text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-800 pb-3">
+            Education
+          </h2>
+          <div class="p-5 rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200/80 dark:border-slate-800 space-y-2">
+            <div class="flex items-center justify-between text-xs font-mono text-slate-500">
+              <span>Sep. 2022 – Jun. 2026</span>
+              <span class="px-2 py-0.5 rounded bg-brand-50 dark:bg-brand-500/10 text-brand-700 dark:text-brand-300 font-semibold">First Class Honours</span>
+            </div>
+            <h3 class="font-display font-bold text-base text-slate-900 dark:text-white">
+              Beijing University of Posts and Telecommunications (BUPT)
+            </h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300">B.Eng. in Internet of Things Engineering</p>
+            <p class="text-xs font-mono text-slate-500">GPA: 3.68 / 4.00 · Rank: Top 12%</p>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <h2 class="font-display text-xl font-bold text-slate-900 dark:text-white border-b border-slate-200 dark:border-slate-800 pb-3">
+            Technical Stack
+          </h2>
+          <div class="p-5 rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200/80 dark:border-slate-800 space-y-3 text-sm">
+            <div>
+              <span class="font-semibold text-slate-900 dark:text-white">Programming:</span>
+              <span class="text-slate-600 dark:text-slate-400 ml-1">Python, C/C++, Shell, LaTeX</span>
+            </div>
+            <div>
+              <span class="font-semibold text-slate-900 dark:text-white">ML &amp; Systems:</span>
+              <span class="text-slate-600 dark:text-slate-400 ml-1">PyTorch, CUDA, Linux, Git, MuJoCo / Continuous Control, LLM Post-Training</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Minimalist Footer -->
+  <footer class="border-t border-slate-200/70 dark:border-slate-800/80 mt-16 py-8">
+    <div class="max-w-4xl mx-auto px-5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+      <div>© 2026 Chubin Zhang. Last updated October 2026.</div>
+      <div>Designed for clarity &amp; zero-friction academic discovery.</div>
+    </div>
+  </footer>
+
+  <!-- Interactive Scripts (Filter, BibTeX, Dark Mode) -->
+  <script>
+    // 1. Dark Mode Toggle
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const darkIcon = document.getElementById('theme-icon-dark');
+    const lightIcon = document.getElementById('theme-icon-light');
+
+    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+      lightIcon.classList.remove('hidden');
+    } else {
+      document.documentElement.classList.remove('dark');
+      darkIcon.classList.remove('hidden');
+    }
+
+    themeToggleBtn.addEventListener('click', function() {
+      darkIcon.classList.toggle('hidden');
+      lightIcon.classList.toggle('hidden');
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('color-theme', 'light');
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('color-theme', 'dark');
+      }
+    });
+
+    // 2. Publication Filter
+    function filterPubs(category) {
+      const cards = document.querySelectorAll('.pub-card');
+      const buttons = document.querySelectorAll('.pub-filter-btn');
+
+      buttons.forEach(btn => {
+        if (btn.getAttribute('data-filter') === category) {
+          btn.classList.add('bg-white', 'dark:bg-slate-900', 'text-slate-900', 'dark:text-white', 'shadow-sm');
+          btn.classList.remove('text-slate-600', 'dark:text-slate-400');
+        } else {
+          btn.classList.remove('bg-white', 'dark:bg-slate-900', 'text-slate-900', 'dark:text-white', 'shadow-sm');
+          btn.classList.add('text-slate-600', 'dark:text-slate-400');
+        }
+      });
+
+      cards.forEach(card => {
+        const tags = card.getAttribute('data-tags').split(' ');
+        if (tags.includes(category)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // 3. BibTeX Toggle
+    function toggleBib(id) {
+      const el = document.getElementById(id);
+      el.classList.toggle('hidden');
+    }
+  </script>
+</body>
+</html>
