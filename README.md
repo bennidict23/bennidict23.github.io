@@ -10,4 +10,4 @@ Open `index.html` in a browser, or run `python3 -m http.server 8000` from this d
 
 GitHub Pages publishes from the root of the `main` branch. Updates go live after pushing to `main` and the Pages build completes.
 
-The featured research images are from the linked GoRL project and the author's public agent oversight preprint. Publication details and links are maintained in `index.html`. A CV is deliberately not published here.
+The paper figures are from the linked GoRL project and the author's public agent oversight and agent stopping preprints. Publication details and links are maintained in `index.html`. A CV is deliberately not published here.
