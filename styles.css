@@ -201,6 +201,10 @@ h1 {
 .research-interests li + li {
   margin-top: 6px;
 }
+.research-interests strong {
+  color: var(--ink);
+  font-weight: 600;
+}
 .profile-links {
   display: flex;
   flex-wrap: wrap;
