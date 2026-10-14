@@ -124,7 +124,7 @@ a:focus-visible {
 .profile-grid {
   display: grid;
   grid-template-columns: 180px minmax(0, 1fr);
-  grid-template-rows: auto auto;
+  grid-template-rows: min-content auto auto;
   gap: 12px 48px;
   align-items: start;
 }
@@ -136,8 +136,21 @@ a:focus-visible {
   border-radius: 4px;
 }
 .profile-heading,
+.about-intro,
 .about-copy {
   min-width: 0;
+}
+.profile-heading {
+  grid-column: 2;
+  grid-row: 1;
+}
+.about-intro {
+  grid-column: 2;
+  grid-row: 2;
+}
+.about-copy {
+  grid-column: 1 / -1;
+  grid-row: 3;
 }
 .feature-kicker,
 .experience-date {
@@ -160,12 +173,16 @@ h1 {
   font-size: 16px;
   line-height: 1.4;
 }
+.about-intro,
 .about-copy {
   color: var(--muted);
   font-size: 16px;
 }
 .about-copy > p {
   margin: 0 0 12px;
+}
+.about-intro > p {
+  margin: 0;
 }
 .interests-heading {
   margin: 16px 0 6px;
@@ -556,6 +573,7 @@ h1 {
   .profile-chinese {
     font-size: 14px;
   }
+  .about-intro,
   .about-copy {
     grid-column: 1 / -1;
     font-size: 14px;
