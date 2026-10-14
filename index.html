@@ -14,7 +14,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    <link rel="stylesheet" href="styles.css?v=20261015-contact-email" />
+    <script src="theme.js?v=20261015-theme"></script>
+    <link rel="stylesheet" href="styles.css?v=20261015-theme" />
     <meta property="og:type" content="profile" />
     <meta
       property="og:title"
@@ -50,6 +51,7 @@
           "AI agents"
         ],
         "sameAs": [
+          "https://scholar.google.com/citations?hl=zh-CN&user=-wJyKG8AAAAJ",
           "https://github.com/bennidict23",
           "https://www.linkedin.com/in/chubin-zhang-20a061420/"
         ]
@@ -60,17 +62,21 @@
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="#about" aria-label="Chubin Zhang, back to top"
-          >CZ<span>.</span></a
-        >
         <nav class="site-nav" aria-label="Primary navigation">
           <a href="#about">About</a><a href="#news">News</a
-          ><a href="#research">Research</a><a href="#publications">Papers</a
+          ><a href="#publications">Publications</a
           ><a href="#experience">Experience</a>
         </nav>
-        <a class="header-contact" href="mailto:chubinzhang23@gmail.com"
-          >Email <span aria-hidden="true">&#8599;</span></a
+        <button
+          class="theme-toggle"
+          id="theme-toggle"
+          type="button"
+          aria-label="Switch to dark mode"
+          aria-pressed="false"
+          data-tooltip="Dark mode"
         >
+          <i class="fa-solid fa-moon" aria-hidden="true"></i>
+        </button>
       </div>
     </header>
     <main id="main">
@@ -94,6 +100,15 @@
               >
             </p>
             <div class="profile-links" aria-label="Contact and profiles">
+              <a
+                href="https://scholar.google.com/citations?hl=zh-CN&amp;user=-wJyKG8AAAAJ"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Google Scholar"
+                aria-label="Google Scholar"
+                ><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i
+                >Scholar</a
+              >
               <a
                 href="https://github.com/bennidict23"
                 target="_blank"
@@ -191,25 +206,7 @@
           </div>
           <ul class="news-list">
             <li>
-              <time datetime="2026-10">Oct 2026</time>
-              <p>
-                <span aria-hidden="true">📝</span> New preprint:
-                <a
-                  href="https://arxiv.org/abs/2610.06191"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Judged Useless, Queried Anyway</a
-                >
-                (<a
-                  href="https://github.com/bennidict23/judged-useless-queried-anyway"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Code</a
-                >).
-              </p>
-            </li>
-            <li>
-              <time datetime="2026-09">Sep 2026</time>
+              <time datetime="2026-09">2026.09:</time>
               <p>
                 <span aria-hidden="true">🎉</span>
                 <a
@@ -218,12 +215,7 @@
                   rel="noopener noreferrer"
                   >Calibration Is Not Control</a
                 >
-                (<a
-                  href="https://github.com/bennidict23/calibration-is-not-control"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Code</a
-                >) and
+                and
                 <a
                   href="https://arxiv.org/abs/2601.22629"
                   target="_blank"
@@ -234,7 +226,7 @@
               </p>
             </li>
             <li>
-              <time datetime="2026-05">May 2026</time>
+              <time datetime="2026-05">2026.05:</time>
               <p>
                 <span aria-hidden="true">🎉</span>
                 <a
@@ -243,12 +235,7 @@
                   rel="noopener noreferrer"
                   >GoRL</a
                 >
-                (<a
-                  href="https://github.com/bennidict23/GoRL"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Code</a
-                >) and
+                and
                 <a
                   href="https://arxiv.org/abs/2605.27095"
                   target="_blank"
@@ -259,7 +246,7 @@
               </p>
             </li>
             <li>
-              <time datetime="2025-11">Nov 2025</time>
+              <time datetime="2025-11">2025.11:</time>
               <p>
                 <span aria-hidden="true">🎉</span>
                 <a
@@ -268,98 +255,10 @@
                   rel="noopener noreferrer"
                   >LexChain</a
                 >
-                (<a
-                  href="https://github.com/thunlp/LexChain"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Code</a
-                >) was accepted to AAAI 2026.
+                was accepted to AAAI 2026.
               </p>
             </li>
           </ul>
-        </div>
-      </section>
-      <section
-        class="research-section"
-        id="research"
-        aria-labelledby="research-title"
-      >
-        <div class="container">
-          <div class="section-heading">
-            <h2 id="research-title">Research</h2>
-          </div>
-          <div class="featured-grid">
-            <article class="featured-work">
-              <a
-                class="feature-image"
-                href="assets/oversight-figure.png"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Open the Calibration Is Not Control figure at full size"
-                ><img
-                  src="assets/oversight-figure.png"
-                  alt="Risk-score oversight compared with action-conditioned intervention decisions"
-                  width="1400"
-                  height="694"
-                  loading="lazy"
-              /></a>
-              <p class="feature-kicker">NeurIPS 2026</p>
-              <h3>Calibration Is Not Control</h3>
-              <p class="feature-summary">
-                Predicting that an agent might fail does not tell us whether
-                intervening will help. We study intervention value to make
-                better oversight decisions.
-              </p>
-              <div class="paper-links">
-                <a
-                  href="https://arxiv.org/abs/2606.21399"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Paper <span aria-hidden="true">&#8599;</span></a
-                ><a
-                  href="https://github.com/bennidict23/calibration-is-not-control"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Code <span aria-hidden="true">&#8599;</span></a
-                >
-              </div>
-            </article>
-            <article class="featured-work">
-              <a
-                class="feature-image"
-                href="assets/gorl-framework.png"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Open the Generative Online Reinforcement Learning figure at full size"
-                ><img
-                  src="assets/gorl-framework.png"
-                  alt="GoRL framework: latent policy optimization and generative decoder refinement"
-                  width="2043"
-                  height="873"
-                  loading="lazy"
-              /></a>
-              <p class="feature-kicker">ICML 2026</p>
-              <h3>Generative Online Reinforcement Learning</h3>
-              <p class="feature-summary">
-                GoRL separates tractable latent policy optimization from flow
-                and diffusion action generation, making expressive policies
-                easier to train through interaction.
-              </p>
-              <div class="paper-links">
-                <a
-                  href="https://arxiv.org/abs/2512.02581"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Paper <span aria-hidden="true">&#8599;</span></a
-                ><a
-                  href="https://github.com/bennidict23/GoRL"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Code <span aria-hidden="true">&#8599;</span></a
-                >
-              </div>
-            </article>
-          </div>
         </div>
       </section>
       <section
@@ -371,10 +270,48 @@
           <div class="section-heading">
             <h2 id="publications-title">Publications</h2>
           </div>
+          <div class="preprints-group">
+            <h3 class="group-heading">Preprints <span>2026</span></h3>
+            <ol class="publication-list">
+              <li class="publication-item" id="paper-judged-useless">
+                <span class="publication-number" aria-hidden="true">01</span>
+                <div class="publication-body">
+                  <h4>
+                    <a
+                      href="https://arxiv.org/abs/2610.06191"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Judged Useless, Queried Anyway: Tool-Using Agents Rarely
+                      Turn Their Own Evidence Judgments into Stopping Decisions
+                      <span aria-hidden="true">&#8599;</span></a
+                    >
+                  </h4>
+                  <p class="authors">
+                    <strong>Chubin Zhang</strong>, Zhenglin Wan, Xingrui Yu,
+                    Jingxuan Wu, Yaxin Zhou, Ivor Tsang, Bo An
+                  </p>
+                  <p class="venue">arXiv preprint, 2026</p>
+                  <div class="paper-links">
+                    <a
+                      href="https://arxiv.org/abs/2610.06191"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Preprint <span aria-hidden="true">&#8599;</span></a
+                    ><a
+                      href="https://github.com/bennidict23/judged-useless-queried-anyway"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Code <span aria-hidden="true">&#8599;</span></a
+                    >
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
           <h3 class="group-heading">Conference Papers <span>2026</span></h3>
           <ol class="publication-list">
             <li class="publication-item" id="paper-calibration">
-              <span class="publication-number" aria-hidden="true">01</span>
+              <span class="publication-number" aria-hidden="true">02</span>
               <div class="publication-body">
                 <h4>
                   <a
@@ -407,7 +344,7 @@
               </div>
             </li>
             <li class="publication-item" id="paper-denoising">
-              <span class="publication-number" aria-hidden="true">02</span>
+              <span class="publication-number" aria-hidden="true">03</span>
               <div class="publication-body">
                 <h4>
                   <a
@@ -444,7 +381,7 @@
               </div>
             </li>
             <li class="publication-item" id="paper-gorl">
-              <span class="publication-number" aria-hidden="true">03</span>
+              <span class="publication-number" aria-hidden="true">04</span>
               <div class="publication-body">
                 <h4>
                   <a
@@ -486,7 +423,7 @@
               </div>
             </li>
             <li class="publication-item" id="paper-distillation">
-              <span class="publication-number" aria-hidden="true">04</span>
+              <span class="publication-number" aria-hidden="true">05</span>
               <div class="publication-body">
                 <h4>
                   <a
@@ -514,7 +451,7 @@
               </div>
             </li>
             <li class="publication-item" id="paper-lexchain">
-              <span class="publication-number" aria-hidden="true">05</span>
+              <span class="publication-number" aria-hidden="true">06</span>
               <div class="publication-body">
                 <h4>
                   <a
@@ -547,54 +484,6 @@
               </div>
             </li>
           </ol>
-          <div class="preprints-group">
-            <h3 class="group-heading">Preprints <span>2026</span></h3>
-            <article class="preprint-item" id="paper-judged-useless">
-              <a
-                class="preprint-image"
-                href="assets/judged-useless-teaser.png"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Open the Judged Useless figure at full size"
-                ><img
-                  src="assets/judged-useless-teaser.png"
-                  alt="An agent keeps searching after judging results useless"
-                  width="1400"
-                  height="710"
-                  loading="lazy"
-              /></a>
-              <div class="publication-body">
-                <h4>
-                  <a
-                    href="https://arxiv.org/abs/2610.06191"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Judged Useless, Queried Anyway: Tool-Using Agents Rarely
-                    Turn Their Own Evidence Judgments into Stopping Decisions
-                    <span aria-hidden="true">&#8599;</span></a
-                  >
-                </h4>
-                <p class="authors">
-                  <strong>Chubin Zhang</strong>, Zhenglin Wan, Xingrui Yu,
-                  Jingxuan Wu, Yaxin Zhou, Ivor Tsang, Bo An
-                </p>
-                <p class="venue">arXiv preprint, 2026</p>
-                <div class="paper-links">
-                  <a
-                    href="https://arxiv.org/abs/2610.06191"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Preprint <span aria-hidden="true">&#8599;</span></a
-                  ><a
-                    href="https://github.com/bennidict23/judged-useless-queried-anyway"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Code <span aria-hidden="true">&#8599;</span></a
-                  >
-                </div>
-              </div>
-            </article>
-          </div>
         </div>
       </section>
       <section
