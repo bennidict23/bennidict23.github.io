@@ -206,6 +206,16 @@ h1 {
   color: var(--ink);
   font-weight: 600;
 }
+.profile-contact {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+.profile-contact a {
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
 .profile-links {
   display: flex;
   flex-wrap: wrap;
@@ -583,6 +593,10 @@ h1 {
     grid-column: 1 / -1;
     font-size: 14px;
     line-height: 1.7;
+  }
+  .profile-contact {
+    margin-top: 8px;
+    font-size: 12px;
   }
   .profile-links {
     margin-top: 10px;
